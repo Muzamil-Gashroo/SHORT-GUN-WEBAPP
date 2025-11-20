@@ -1,10 +1,10 @@
-# 📌 **SHORT-GUN WebApp**
+# **SHORT-GUN WebApp**
 A simple and fast web application that takes any URL and instantly generates a clean QR Code and a Short Url.  
 Perfect for sharing links quickly, creating scannable codes, or embedding into websites and documents.
 
 ---
 
-## 🚀 **Features**
+##  **Features**
 - Enter any valid URL  
 - Generates a QR code instantly  
 - Clean & minimal UI  
@@ -13,13 +13,13 @@ Perfect for sharing links quickly, creating scannable codes, or embedding into w
 
 ---
 
-## 📦 **Tech Stack**
+##  **Tech Stack**
 - **Frontend:** React / TypeScript  
 - **Backend:** Node.js / Express  
 
 ---
 
-## 🖥️ **How It Works**
+##  **How It Works**
 1. User enters a URL  
 2. App validates the URL  
 3. The backend generates a QR code & Shorturl 
@@ -27,7 +27,7 @@ Perfect for sharing links quickly, creating scannable codes, or embedding into w
 
 ---
 
-## ⚙️ **Installation & Setup**
+##  **Installation & Setup**
 
 ### **Clone the repo**
 ```bash
@@ -47,7 +47,7 @@ npm run dev
 
 ---
 
-## 🧪 **API Endpoint**
+##  **API Endpoint**
 ### **POST /create/url**
 Send a URL in JSON format:
 
@@ -61,11 +61,11 @@ Returns a generated QR code image and a Short Url.
 
 ---
 
-## 📸 **Demo Screenshot**
+##  **Demo Screenshot**
 
 ![alt text](00cce2-1.png)
 
 ---
 
-## 📄 **License**
+## **License**
 This project is licensed under the **MIT License**.
