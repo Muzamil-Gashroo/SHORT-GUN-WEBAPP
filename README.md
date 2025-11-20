@@ -1,4 +1,4 @@
-# **SHORT-GUN WebApp**
+# **SHORT-GUN **
 A simple and fast web application that takes any URL and instantly generates a clean QR Code and a Short Url.  
 Perfect for sharing links quickly, creating scannable codes, or embedding into websites and documents.
 
@@ -31,8 +31,8 @@ Perfect for sharing links quickly, creating scannable codes, or embedding into w
 
 ### **Clone the repo**
 ```bash
-git clone https://github.com/Muzamil-Gashroo/SHORT-GUN-WEBAPP.git
-cd SHORT-GUN-WEBAPP
+git clone https://github.com/Muzamil-Gashroo/SHORT-GUN.git
+cd SHORT-GUN
 ```
 
 ### **Install dependencies**
