@@ -1,4 +1,4 @@
-# **SHORT-GUN **
+# ** SHORT-GUN **
 A simple and fast web application that takes any URL and instantly generates a clean QR Code and a Short Url.  
 Perfect for sharing links quickly, creating scannable codes, or embedding into websites and documents.
 
