@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Terminal/Matrix color scheme */
+    --background: 120 100% 2%;
+    --foreground: 120 100% 70%;
+
+    --card: 120 50% 4%;
+    --card-foreground: 120 100% 70%;
+
+    --popover: 120 50% 4%;
+    --popover-foreground: 120 100% 70%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 120 100% 5%;
+
+    --secondary: 120 30% 15%;
+    --secondary-foreground: 120 100% 70%;
+
+    --muted: 120 30% 10%;
+    --muted-foreground: 120 50% 50%;
+
+    --accent: 120 100% 40%;
+    --accent-foreground: 120 100% 5%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 100% 25%;
+    --input: 120 50% 8%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.25rem;
+
+    /* Terminal-specific colors */
+    --terminal-green: 120 100% 50%;
+    --terminal-green-dim: 120 100% 35%;
+    --terminal-green-bright: 120 100% 70%;
+    --terminal-bg: 120 100% 2%;
+    --terminal-bg-light: 120 50% 5%;
+    
+    --glow-color: 120 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Terminal scanline effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 255, 65, 0.03) 50%
+    );
+    background-size: 100% 4px;
+    animation: scanlines 0.1s linear infinite;
+  }
+
+  /* Flicker effect */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    background: rgba(0, 255, 65, 0.01);
+    animation: flicker 0.15s infinite;
+  }
+
+  @keyframes scanlines {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 4px;
+    }
+  }
+
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.95;
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 10px hsl(var(--glow-color)),
+                   0 0 20px hsl(var(--glow-color)),
+                   0 0 30px hsl(var(--glow-color));
+    }
+    50% {
+      text-shadow: 0 0 15px hsl(var(--glow-color)),
+                   0 0 25px hsl(var(--glow-color)),
+                   0 0 35px hsl(var(--glow-color));
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .terminal-glow {
+    text-shadow: 0 0 10px hsl(var(--terminal-green)),
+                 0 0 20px hsl(var(--terminal-green)),
+                 0 0 30px hsl(var(--terminal-green));
+  }
+
+  .terminal-border-glow {
+    box-shadow: 0 0 10px hsl(var(--terminal-green) / 0.5),
+                0 0 20px hsl(var(--terminal-green) / 0.3),
+                inset 0 0 10px hsl(var(--terminal-green) / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
