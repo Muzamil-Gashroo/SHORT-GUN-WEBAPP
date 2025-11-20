@@ -61,11 +61,5 @@ Returns a generated QR code image and a Short Url.
 
 ---
 
-##  **Demo Screenshot**
-
-![alt text](00cce2-1.png)
-
----
-
 ## **License**
 This project is licensed under the **MIT License**.
