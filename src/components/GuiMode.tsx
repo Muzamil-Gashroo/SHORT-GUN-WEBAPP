@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Copy, Check, Link2, QrCode, Zap } from "lucide-react";
 import { toast } from "sonner";
+const api_url = import.meta.env.VITE_API_URL;
+
 
 interface ApiResponse {
   redirectUrl: string;
@@ -29,7 +31,7 @@ export const GuiMode = () => {
 
     try {
       
-      const response = await fetch("http://localhost:3000/create/url", {
+      const response = await fetch(api_url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
